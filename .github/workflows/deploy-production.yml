@@ -12,7 +12,7 @@ jobs:
 
     steps:
       - name: Check out code
-        uses: actions/checkout@v6
+        uses: actions/checkout@v6.0.3
 
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
@@ -51,7 +51,7 @@ jobs:
           server-dir: ${{ secrets.PROD_FTP_DEPLOY_PATH }}/public/build/
 
       - name: Run Server Commands via SSH
-        uses: appleboy/ssh-action@v1.0.3
+        uses: appleboy/ssh-action@v1.2.5
         with:
           host: ${{ secrets.ALL_SSH_HOST }}
           username: ${{ secrets.ALL_SSH_USER }}
